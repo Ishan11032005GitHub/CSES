@@ -1,18 +1,21 @@
 import java.util.*;
 class WierdAlgorithm {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int x=sc.nextInt();
-        System.out.print(x + " ");
+        Scanner sc = new Scanner(System.in);
+        long x = sc.nextLong();
+        StringBuilder ans = new StringBuilder();
+        ans.append(x).append(' ');
+
         while(x!=1){
             if(x%2==0){
                 x/=2;
             }
             else{
-                x*=3;
-                x+=1;
+                x=(x*3)+1;
             }
-            System.out.print(x + " ");
+            ans.append(x).append(' ');
         }
+
+        System.out.print(ans);
     }
 }
